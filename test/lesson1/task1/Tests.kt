@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Tag
 import kotlin.math.PI
 
 import org.junit.Test
-import org.junit.Assert.assertEquals
+import org.junit.Assert.*
 
 
 //class Tests {
@@ -118,5 +118,25 @@ class MyTests {
     fun quadraticEquationRoot() {
         assertEquals(2.0, quadraticEquationRoot(1.0, -3.0, 2.0), 1e-15)
         assertEquals(2, 1 + 1)
+    }
+
+    @Test
+    fun seconds(){
+        assertEquals(2, seconds(0,0,2))
+    }
+
+    @Test
+    @Tag("Easy")
+    fun angleInRadian(){
+        assertEquals(0.63256, angleInRadian(36, 14, 35), 1e-5)
+        assertEquals(PI / 2.0, angleInRadian(90, 0, 0), 1e-5)
+    }
+
+    @Test
+    @Tag("Easy")
+    fun thirdDigit() {
+        assertEquals(8, thirdDigit(3801))
+        assertEquals(1, thirdDigit(100))
+        assertEquals(0, thirdDigit(1000))
     }
 }
