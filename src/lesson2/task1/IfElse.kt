@@ -25,12 +25,14 @@ fun quadraticRootNumber(a: Double, b: Double, c: Double): Int {
  *
  * Получить строковую нотацию для оценки по пятибалльной системе
  */
-fun gradeNotation(grade: Int): String = when (grade) {
-    5 -> "отлично"
-    4 -> "хорошо"
-    3 -> "удовлетворительно"
-    2 -> "неудовлетворительно"
-    else -> "несуществующая оценка $grade"
+fun gradeNotation(grade: Int): String {
+    return when (grade) {
+        5 -> "отлично"
+        4 -> "хорошо"
+        3 -> "удовлетворительно"
+        2 -> "неудовлетворительно"
+        else -> "несуществующая оценка $grade"
+    }
 }
 
 /**
